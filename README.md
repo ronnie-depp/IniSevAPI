@@ -2,9 +2,10 @@
 
 #### You need to configure your `.env` file and other files in `config` directory to get started.
 - first set your database email configuration to get the application up and running.
-- I'm using `php artisan serve --port=1920`. You can change your port number as desired.
+- I'm using `php artisan serve --port=1920`. You can change your port number as desired. But be sure to update all request paths in `Postman`.
 - For documentation see `Postman Collection` Documentation with Examples included in `Postman Collection` file in `IniSevAPI/IniSevAPI.postman_collection.json` and code comments in `routes/api.php` file.
 - I'm using https://mailtrap.io for email functionality. Because when using `SMTP` with `SendMail` configured, GMAil and Hotmail return CRLs (`Cerificate Revoke Lists`) after successfully establishing connection using TLS (`Transport Layer Security`) handshakes.
+- I use the `Artisan` command: `php artisan queue:work --queue=default,emails database` to monitor and send/dispatch all queued email jobs. `emails` Queue is used for Mailing List emails when using `[Create Post](http://localhost:1920/api/v1/post/new)` `http://localhost:1920/api/v1/post/new` request. `default` queue is for 2 test emails sent when using `http://localhost:1920/api/v1/email/sendmail/test` request. `database` Queue driver is being used.
 
 # Original Requirements
 
