@@ -1,3 +1,13 @@
+# IniSevAPI for Mailing List (Laravel 8.83.16 / PHP 7.3.12)
+
+#### You need to configure your `.env` file and other files in `config` directory to get started.
+- first set your database email configuration to get the application up and running.
+- I'm using `php artisan serve --port=1920`. You can change your port number as desired.
+- For documentation see `Postman Collection` Documentation with Examples included in `Postman Collection` file in `IniSevAPI/IniSevAPI.postman_collection.json` and code comments in `routes/api.php` file.
+- I'm using https://mailtrap.io for email functionality. Because when using `SMTP` with `SendMail` configured, GMAil and Hotmail return CRLs (`Cerificate Revoke Lists`) after successfully establishing connection using TLS (`Transport Layer Security`) handshakes.
+
+# Original Requirements
+
 Create a simple subscription platform(only RESTful APIs with MySQL) in which users can subscribe to a website (there can be multiple websites in the system). Whenever a new post is published on a particular website, all it's subscribers shall receive an email with the post title and description in it. (no authentication of any kind is required)
 
 MUST:-
