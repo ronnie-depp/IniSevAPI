@@ -1,7 +1,8 @@
 # IniSevAPI for Mailing List (Laravel 8.83.16 / PHP 7.3.12)
 
 #### You need to configure your `.env` file and other files in `config` directory to get started.
-- first set your database email configuration to get the application up and running.
+- first set your `database` and `mail` configuration to get the application up and running.
+- see https://github.com/ronnie-depp/IniSevAPI/blob/master/.env and use it if it suits you but changes `App Key`.
 - I'm using `php artisan serve --port=1920`. You can change your port number as desired. But be sure to update all request paths in `Postman`.
 - For documentation see `Postman Collection` Documentation with Examples included in `Postman Collection` file in `IniSevAPI/IniSevAPI.postman_collection.json` and code comments in `routes/api.php` file and migration files. 
 - Please import this file in `Postman`: 
