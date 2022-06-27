@@ -346,7 +346,7 @@ Route::prefix('/v1')->group(function () {
                 ->join('posts', 'posts.website_id', '=', 'users_websites_roles.website_id')
                 ->join('websites', 'users_websites_roles.website_id', '=', 'websites.id')
                 ->select('users.email', 'posts.*', 'users_websites_roles.role_id', 'websites.site_url')
-                ->where([['users_websites_roles.role_id', 3], ['posts.emails_sent', 0]])
+                ->where([['users_websites_roles.role_id', 3], ['posts.website_id', $site_id], ['posts.emails_sent', 0]])
                 /*->where('posts.website_id', $site_id)// this site's subscribers
                 ->where('posts.emails_sent', 0)*/
                 ->get();
