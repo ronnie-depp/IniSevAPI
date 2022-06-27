@@ -4,6 +4,7 @@ use App\Models\User;
 use App\Mail\FirstEmail;
 use App\Mail\NewPost;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
